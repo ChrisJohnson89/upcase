@@ -1,7 +1,8 @@
 #card = Card.new
 class Card
 	def initialize(front, back)
-		puts "#{front} => #{back}"
+		@front = front
+		@back = back 
 	end
 end
 
