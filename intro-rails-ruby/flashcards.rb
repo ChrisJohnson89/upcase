@@ -8,12 +8,27 @@ class Card
 	end
 end
 
+class Deck
+	attr_reader :cards
+	def initialize name
+	@name = name
+	@cards = []
+	end
+
+	def << card
+		@cards << card
+	end
+end
+
+
 card1 = Card.new("cat", "neko")
 card2 = Card.new("dog", "inu")
 
-deck = [card1, card2]
+deck = Deck.new("Japanese")
+deck << card1
+deck << card2
 
-deck.each do |card|
+deck.cards.each do |card|
 	front = card.front
 	back = card.back      
 
